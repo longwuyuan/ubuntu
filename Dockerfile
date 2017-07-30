@@ -2,8 +2,6 @@ From ubuntu
 
 RUN apt-get -y update && \
   apt-get -y full-upgrade && \
-  apt-get install net-tools iputils-ping curl tcpdump lsof wget httping python-pip && \
-  pip install --upgrade pip && \
-  pip install supervisor && \
-  apt-get --assume-yes autoremove && \
-  apt-get --assume-yes autoclean
+  apt-get -y install net-tools iputils-ping curl tcpdump lsof wget httping && \
+  apt-get -y autoremove && \
+  apt-get -y autoclean
